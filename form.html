@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  <meta charset="UTF-8">
+ 
+  <title>order form</title>
+  <style>@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+    body{
+      background-image: url("https://rare-gallery.com/uploads/posts/358200-4k-wallpaper.jpg");
+      font-family: "Times New Roman", Times, "serif";
+      color: #262626;
+      margin: 5% 0;
+    }
+    .container{
+      width: 60%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media (min-width: 1200px)
+    {
+      .container{
+        max-width: 1140px;
+      }
+    }
+    .d-flex{
+      display: flex;
+      flex-direction: row;
+      background: rgba(235, 235, 235, 0.2);
+      border-radius: 0 0 5px 5px;
+      border: 2px ridge #d3ad7f;
+      padding: 25px;
+      color:#d3ad7f
+    }
+    form{
+      flex: 4;
+      color:#d3ad7f;
+    }
+
+    .Yorder{
+      flex: 2;
+    }
+    .title{
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #d3ad7f), color-stop(100, #d3ad7f));
+      background: -moz-linear-gradient(top left,#d3ad7f 0%,#d3ad7f 100%);
+      background: -ms-linear-gradient(top left,#d3ad7f 0%, #d3ad7f 100%);
+      background: -o-linear-gradient(top left, #d3ad7f 0%, #d3ad7f 100%);
+      background: linear-gradient(to bottom right, #d3ad7f 0%, #d3ad7f 100%);
+      border-radius:5px 5px 0 0 ;
+      padding: 20px;
+      color: black;
+    }
+    h2{
+      margin: 0;
+      padding-left: 15px; 
+    }
+    .required{
+      color: white;
+    }
+    label, table{
+      display: block;
+      margin: 15px;
+    }
+    label>span{
+      float: left;
+      width: 25%;
+      margin-top: 12px;
+      padding-right: 10px;
+    }
+    input[type="text"], input[type="tel"], input[type="email"]
+    {
+      width: 50%;
+      height: 30px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      border: 1px solid #dadada;
+      color: #888;
+    }
+    select{
+      width: 52.5%;
+      height: 45px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+    .Yorder{
+      margin-top: 15px;
+      height: 600px;
+      padding: 20px;
+      border: 1px solid rgba(235, 235, 235, 0.2);
+      
+    }
+    table{
+      margin: 0;
+      padding: 0;
+    }
+    th{
+      border-bottom: 1px solid rgba(235, 235, 235, 0.2);
+      padding: 10px 0;
+      
+    }
+    tr>td:nth-child(1){
+      text-align: left;
+      color: #2d2d2a;
+    }
+    tr>td:nth-child(2){
+      text-align: right;
+      color: #d3ad7f;
+    }
+    td{
+      border-bottom: 1px solid black;
+      padding: 25px 25px 25px 0;
+    }
+    
+    p{
+      display: block;
+      color:black;
+      margin: 0;
+      padding-left: 25px;
+    }
+    .Yorder>div{
+      padding: 15px 0; 
+    }
+    h1{
+      color:#d3ad7f;
+    }
+    
+    button{
+      width: 40%;
+      margin-top: 10px;
+      padding: 10px;
+      
+      border: none;
+      margin-left: 300px;
+      border-radius: 30px;
+      background:#d3ad7f;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    form{
+        background-color: rgba(235, 235, 235, 0.2);
+        font-size: 25px;
+        font-weight: bold;
+        
+
+    }
+     img{
+      position: absolute;
+    }
+    .error{
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color:white;   }
+    button:hover{
+      cursor: pointer;
+      background: #b8860b;
+    }</style>
+     </style>
+    <script>
+$(document).ready(function() {
+  $.validator.addMethod("passwordRule",function(value ){
+    return /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(value);
+  });
+
+  $("#forms").validate({
+  rules: {
+         name1: {
+          required : true
+         },
+         dob: {
+          required : true,
+          dateISO : true
+         },
+         radio1: {
+          required : true
+         },
+         radio2: {
+          required : true
+         },
+         check1: {
+          required : true
+         },
+         email1: {
+          required : true,
+          email : true
+         },
+         mob:{
+            required:true,
+         },
+        pass: {
+          required : true,
+          passwordRule: true
+            }, 
+        pass1: {
+          required : true,
+          equalTo:"#p"
+           }
+            },
+  messages:{
+    name1:{
+      required:"<br>Name is required!!!"
+    },
+    dob:{
+      required:"<br>DOB is required!!!",
+      dateISO:"<br>Enter correct format!!!"
+    },
+    radio1:{
+      required:"<br>Gender is required!!!"      
+    },
+    radio2:{
+      required:"<br>Location is required!!!"      
+    },
+    check1:{
+      required:"<br>Services is required!!!"      
+    },
+    email1: {
+          required : "<br>Email is required!!!",
+          email : "<br>Enter correct email!!!"
+         },
+         mob:{
+            required:"<br>Phone number is required!!!",
+           },
+   pass: {
+          required : "<br>Password is required!!!",
+          passwordRule: "<br>One uppercase,lowercase,number,specialchar"
+         },
+         pass1: {
+          required : "<br>Password is required!!!",
+          equalTo: "<br>Password doesn't Match!!"
+         },
+        }, 
+        errorPlacement: function(error, element){
+            if (element.is(":radio")){
+            error.appendTo(element.parent(".gender"));
+            }
+            else if (element.is(":checkbox")){
+              error.appendTo(element.parent(".book"));
+            }
+            
+
+          else {error.insertAfter(element);}}
+});
+});
+</script>
+<script>
+  $(document).ready(function(){
+      $("input").focus(function(){
+      $(this).css("background","#d3ad7f").css("color","black");
+  });
+  $("input").keyup(function(){
+      $(this).css("background","#d3ad7f").css("color","black");
+  });
+  $("input").keydown(function(){
+      $(this).css("background","#b8860b").css("color","black");
+  });
+  $("button").click(function(){
+              $("h1").trigger("func",["THANK YOU"]);
+            });
+            $("h1").on("func",function(e,message){
+                alert(message);
+            });
+            $("h1.stat").click(function(){
+               $("h1.stat").css('margin-left','700px');
+             });
+  
+  });
+      </script>
+  </head>
+<body>
+  <div class="container">
+    <div class="title">
+        <h2>Product Order Form</h2>
+    </div>
+<div class="d-flex">
+<form id="forms"><br>
+  <div class="container">
+    <div class="form-group">
+      <b>NAME<span class="required">*</span></b><br>
+<input type="text" name="name1" value=""><br>
+
+    </div>
+  </div>
+<div class="container">
+  <div class="form-group"><b>
+DATE OF BIRTH<span class="required">*</span></b><br>
+<input type="text" name="dob"><br>
+
+</div>
+</div>
+<div class="container">
+  <div class="form-group"><b>
+GENDER<span class="required">*</span></b><br><br>
+<div class="gender">
+<input type="radio" name="radio1">Male
+<input type="radio" name="radio1">Female
+</div>
+</div>
+</div><br>
+<div class="container">
+  <div class="form-group"><b>
+EMAIL ID<span class="required">*</span></b><br>
+<input type="email" name="email1">
+</div></div><br>
+<div class="container">
+  <div class="form-group"><b>
+PHONE NO<span class="required">*</span></b><br>
+<input type="text" name="mob">
+</div></div>
+<br>
+<div class="container">
+  <div class="form-group"><b>
+PASSWORD<span class="required">*</span></b><br>
+<input type="password" id="p" name="pass">
+</div></div>
+<br>
+<div class="container">
+  <div class="form-group"><b>
+RE-ENTER PASSWORD<span class="required">*</span></b><br>
+<input type="password" name="pass1"></div></div>
+<br>
+<div class="container">
+  <div class="form-group"><b>
+LOCATION<span class="required">*</span></b><br>
+<input type="text" name="radio2">
+</div></div>
+<br>
+<div class="container">
+  <div class="form-group"><b>SERVICES YOU LIKE TO ORDER<span class="required">*</span></b><br><br>
+<div class="book">
+<input type="checkbox" name="check1">Logo&nbsp;<br>
+<input type="checkbox" name="check1">Broucher&nbsp;<br>
+<input type="checkbox" name="check1">Photoshop&nbsp;<br>
+<input type="checkbox" name="check1">Poster &nbsp;<br>
+<input type="checkbox" name="check1">Card&nbsp;<br>
+<input type="checkbox" name="check1">Invitation&nbsp;
+
+</div></div></div>
+<br><br></div>
+<center><h1 class="stat">VISIT AGAIN!!!!</h1></center>
+<button>PLACE ORDER</button>
+  </div></div>  
+</form>
+</body>
+</html>

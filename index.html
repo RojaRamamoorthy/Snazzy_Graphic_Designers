@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+   <style>
+    img{
+    position:absolute;
+    opacity:0.7;
+    margin-top: 110px;
+    }
+    h1{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-style:italic;
+
+        
+        color:white;
+        font-weight: bolder;
+        background-color: #d3ad7f;
+    }
+    a{
+  background-color: #d3ad7f;
+  border: none;
+  color:white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:bold ;
+}
+#h{
+   color: black;
+}
+h2{
+   text-align: center;
+   color: #d3ad7f;
+   padding-top: 380px;
+   font-size: 30px;
+}
+   </style>   
+  <script>
+     $(document).ready(function() {  
+      $('h1').ready(function() {
+               $( "a" ).effect({  
+                  effect: "slide",  
+                 duration: 6000  
+               });  
+     });
+     
+            $('h1').ready(function() {  
+               $('img' ).effect({  
+                  effect: "slide",  
+                 duration: 6000  
+               });  
+            });  
+            $('h1').ready(function() {  
+               $('img').effect({  
+                  effect: "pulsate",  
+                 duration: 2000  
+               });  
+            });  
+            $('h1').ready(function() {  
+               $('a').effect({  
+                  effect: "pulsate",  
+                  duration: 2000,
+                  time:5
+               });  
+            });  
+            $(this).ready(function() {  
+               alert("WELCOME TO SNAZZY GRAPHIC DESIGN")
+            }); 
+            $('img').click(function(){
+               $(this).effect({
+                  effect:"explode",
+                  duration:1000
+               });
+            });
+            $('h2').click(function(){
+               $(this).effect({
+                  effect:"drop",
+                  duration:1000
+               });
+            });
+            $('h1').click(function(){
+               $('h2').hide()
+            });
+         });
+
+  </script>      
+</head>
+<body bgcolor="black">
+   <img src="img1.jpg"  width="1350px" height="800px">
+<img src="img3.jpg" width="1350px" height="800px">
+
+<center><h1>SNAZZY GRAPHIC DESIGNERS</h1>
+<nav>
+   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="h" href="index.html">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="about.html" id="ab">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="services.html">SERVICES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="gallery.html">GALLERY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+    <a href="form.html">ORDER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</center>
+</nav>
+
+<h2>SNAZZY GRAPHIC DESIGNERS</h2>
+</body>
+</html>

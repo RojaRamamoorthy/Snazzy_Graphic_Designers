@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+     <!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Dorsa" rel="stylesheet">
+<!-- //web font -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script>
+    $( function() {
+      $(".c1").click(function(){
+               $(".c1").effect( "puff", 1000 ).css("color","white");
+            });
+            $(".c2").click(function(){
+               $(".c2").effect( "puff", 1000 ).css("color","white");
+            });
+     
+        $("h1").click(function(){
+               $("h1").effect( "bounce", {times:4}, 1000 ).css("color","#d3ad7f");
+            });
+           
+      $( "#slider" ).slider();
+      $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+    } );
+
+    $("button").click(function(){
+    $("div").animate({left: '250px'});
+    $("h1").animate({font:'29px'});
+  });
+
+
+    </script>
+   
+    <style>
+        .btn {
+            height: 50px;
+            background-color: #d3ad7f;
+            color: white;
+            width: 100px;
+  box-shadow: 0 8px 16px 0 rgba(235, 235, 235, 0.2), 0 6px 20px 0 rgba(237, 229, 229, 0.19);
+}
+     body{
+       background-color: black;
+       color: #d3ad7f;
+       font-family: 'Times New Roman', Times, serif;
+     }
+     section{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+     }
+
+     .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  background: rgb(0, 0, 0);
+  padding: 15px;
+  margin: 4%;
+}
+.container span {
+ height: 560px;
+ padding: 7px;
+ border: solid #d3ad7f 0.7px;
+ width: 340px;
+ transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  background-color: rgb(46, 45, 45);
+}
+.container img {
+  width: 100%;
+  height: 45%;
+  border: solid #d3ad7f 1.7px;
+  display: block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 100ms ease-out;
+
+}
+.container img:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.ttl{
+    color: #dcd4cb;
+    font-size: medium;
+}
+.content{
+    text-align: left;
+
+}
+a{
+  background-color: #d3ad7f;
+  border: none;
+  color:white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:bold ;
+}
+ 
+a:hover{
+    color: black;
+    background-color:white
+}
+    </style>
+</head>
+<body>
+    
+<center><h1><b>SNAZZY GRAPHIC DESIGNERS</b></h1></center><br><br>
+    <center>
+		<nav>
+   
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="h" href="index.html">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="about.html" id="ab">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="services.html" style="color: black;">SERVICES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="gallery.html">GALLERY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+			<a href="form.html">ORDER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</center>
+		</nav>
+		
+
+    <div id="dialog" title="Welcome">
+        WELCOME!!! <br> Here's our services for you.
+     </div>
+    <br><hr>
+    <!--SERVICES FOR U-->
+    <section  style="text-align: center;">
+       
+        <h1 id="c"><br>Services We Offer</h1>
+        <div class="container">
+            <span><h2 class="ttl">LOGO DESIGNING</h2><img src="logos.png" alt="no img"><br><p class="content c1">&nbsp;&nbsp;&nbsp;Branding is the process of building a brand. To be more specific, it is a strategy designed by companies to help people to quickly identify their products and organization, and give them a reason to choose their products over the competition.<br><br>&nbsp;&nbsp;&nbsp;An expert graphic designer that specializes in developing and implementing a unique and original mark or graphic</p></span>
+            <span><h2 class="ttl">BROCHURE DESIGNING</h2><img src="brochure.avif" alt="no img"><br><p class="content c2">&nbsp;&nbsp;&nbsp;A Brochure is a marketing tool used to advertise a company's products or services. Brochures come in several shapes and sizes and can range in form from a single page that has been folded to create sections—as in bifold or trifold brochures—to the more common bound multi-page booklet. They usually consist of pictures accompanied by supporting text.<br><br>&nbsp;&nbsp;&nbsp;A brochure is generally used by a business to advertise its key products or services. </p></span>
+            <span><h2 class="ttl">PHOTOSHOP</h2><img src="photoshop.jpg" alt="no img"><br><p class="content">&nbsp;&nbsp;&nbsp;Photoshop is an image creation, graphic design and photo editing software developed by Adobe. The software provides many image editing features for pixel-based images, raster graphics and vector graphics.<br><br>&nbsp;&nbsp;&nbsp; It also allows to create and edit raster images with multiple layers and import the images in various file formats.Photoshop is for almost any type of image editing, from touching up photos to creating high-quality graphics.</p></span>
+            <span><h2 class="ttl">POSTER DESIGN</h2><img src="poster.avif" alt="no img"><br><p class="content">&nbsp;&nbsp;&nbsp;Poster artists utilize graphic design and usually have more flexibility and freedom beyond traditional marketing methods. The current focus on digital advertising offers opportunities for interactivity and dynamic designs that could transform poster art in new ways.<br><br>&nbsp;&nbsp;&nbsp;Posters include both textual and graphic elements, although a poster may be either wholly graphical or wholly text. Posters are designed to be both eye-catching and informative.</p></span>
+            <span><h2 class="ttl">CARD DESIGN</h2><img src="card.webp" alt="no img"><br><p class="content">&nbsp;&nbsp;&nbsp;The primary task of a greeting card designer is to envision and create a design that complements the copy inside the card.<br><br>&nbsp;&nbsp;&nbsp;The business card represents your company's brand. Not only does it convey important personal contact information such as name, title, email, website, address and phone number, but oftentimes it is also the first exposure to the overall image of the business.
+            </p></span>
+            <span><h2 class="ttl">INVITATION CARDS</h2><img src="invitation.webp" alt="no img"><br><p class="content">&nbsp;&nbsp;&nbsp;An Invitation Card is a tool to invite people to your special events such as Birthday party, Anniversary party, Wedding party, etc. However, everyone wants to be an important person that others take an interest to invite into the party.<br><br>&nbsp;&nbsp;&nbsp;An invitation card contains the details of the invitation, which can be in traditional paper form or a digital one. </p></span>
+        </div>
+        
+    </section>
+    <div style="text-align: center;">
+    <button id="opener" class="btn">GREETINGS</button>
+    </div><br>
+    <!--PRICING-->
+   <section>
+    <div id="slider"></div>
+    <br>
+        <h1 id="slid" style="text-align: center;">PRICING</h1><br>
+        <div class="main">	
+            <div class="pricing-agileinfo">
+                <div class="pricing-grid grid-one">
+                    <div class="w3ls-top">
+                        <h3>Basic</h3>
+                        <h4 style="color: black;"><span class="sup">$</span> 30  </h4>  
+                    </div>
+                    <div class="w3ls-bottom">
+                        <ul class="count">
+                            <li>Logo </li>
+                            <li>Poster Design </li>
+                            <li>Brochure Design </li>
+                            <li>Advertisment</li>
+                        </ul>
+                        <div class="more">
+                            <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">Buy Now</a>				
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-grid grid-two">
+                    <div class="w3ls-top">
+                        <h3>Standard</h3>
+                        <h4  style="color: black;"><span class="sup">$</span> 50  </h4>  
+                    </div>
+                    <div class="w3ls-bottom">
+                        <ul class="count">
+                            <li>Photoshop </li>
+                            <li>Poster Design </li>
+                            <li>Brochure Design </li>
+                            <li>Cards</li>
+                        </ul>
+                        <div class="more">
+                            <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">Buy Now</a>				
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-grid grid-three">
+                    <div class="w3ls-top">
+                        <h3>Super</h3>
+                        <h4 style="color: black;"><span class="sup">$</span> 70  </h4>  
+                    </div>
+                    <div class="w3ls-bottom">
+                        <ul class="count">
+                            
+                            <li>Poster Design </li>
+                            <li>Brochure Design </li>
+                            <li>Photoshop</li>
+                            <li>Logo + Card </li>
+                        </ul>
+                        <div class="more">
+                            <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">Buy Now</a>				
+                        </div>
+                    </div>
+                </div>
+                <div class="zb pricing-grid grid-four">
+                    <div class="w3ls-top">
+                        <h3 >Ultimate</h3>
+                        <h4  style="color: black;"><span class="sup">$</span> 90  </h4>  
+                    </div>
+                    <div class="w3ls-bottom">
+                        <ul class="count">
+                            
+                            <li>Logo + Poster Design</li>
+                            <li>Photoshop </li>
+                            <li>Brochure Design + Cards</li>
+                            <li>Invitations </li>
+                            
+                        </ul>
+                        <div class="more">
+                            <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">Buy Now</a>				
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="clear"> </div>  
+            </div>
+            <hr>
+                        <br><br>
+            
+            <!-- //pop-up-grid --> 
+        </div>	
+        <!-- //main -->
+   </section> 
+   <h1 style="text-align: center;">Veiw More Designs</h1><br>
+   <center><button class="btn"><a href="gallery.html">More</a></button></center>
+   <section>
+       
+   </section>
+</body>
+</html>

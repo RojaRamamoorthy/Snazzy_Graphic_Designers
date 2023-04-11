@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       
+        <title>Gallery</title>
+        <style>
+    * {
+      box-sizing: border-box;
+    }
+    :root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    h1{
+            color: #d3ad7f;
+            font-family: "Times New Roman", Times, "serif";
+            
+
+        }
+        h2{
+            color: #d3ad7f;
+            font-family: "Times New Roman", Times, "serif";
+            background: black;
+
+        }
+        .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.5rem 2rem;
+    padding: 20px;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+    font-weight: bolder;
+    
+}
+#tabs{
+    
+            font-family: "Times New Roman", Times, "serif";
+          color: #d3ad7f;
+background: black;
+            padding: 10px;
+}
+a{
+    
+  font-family: "Times New Roman", Times, "serif";
+background: #d3ad7f;
+    padding: 15px;
+    font-weight: bold;
+}
+body{
+        background: black;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+   
+    img{
+      padding: 50px;
+      border-style: ridge;
+  border-color: #d3ad7f;
+  border-width: 7px;
+    }
+    #price{
+      color:white
+    }
+    label{
+      color: white;
+      font-family: "Times New Roman", Times, "serif";
+      font-size: 30px;
+    }
+    input[type="checkbox"]
+    {
+      width: 10%;
+      height: 20px;
+     
+    background:  #d3ad7f;
+      border: 1px solid white;
+      color: #d3ad7f;
+    }
+    #rate{
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+   
+
+          </style>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>jQuery UI Tabs - Default functionality</title>
+          <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+          <link rel="stylesheet" href="/resources/demos/style.css">
+          <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+          <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+          
+              <script> 
+                $(document).ready(function(){
+                  $("img").mouseenter(function(){
+    $(this).css("transform", "scale(1)");
+  }); 
+  $("img").mouseleave(function(){
+    $(this).css("transform", "scale(0.5)");
+  });
+  
+   $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  $("#h1").hover(function(){
+    $(this).css("background","white").css("color","black");
+});
+$("#h2").hover(function(){
+  $(this).css("background","white").css("color","black");
+});
+$("#h3").hover(function(){
+  $(this).css("background","white").css("color","black");
+});
+$("#h4").hover(function(){
+  $(this).css("background","white").css("color","black");
+});
+$("#h5").hover(function(){
+  $(this).css("background","white").css("color","black");
+});
+$("#h6").hover(function(){
+    $(this).css("background","white").css("color","black");
+});
+
+  $("#rate").click(function(){
+              $("h1").trigger("func",["THANK YOU"]);
+            });
+            $("h1").on("func",function(e,message){
+                alert(message);
+            });
+          
+           $("#start").mousemove(function(){
+               $("#start").effect( "puff", 1000 ).css("color","white");
+            });
+            $("#logo").mousemove(function(){
+               $("#logo").effect( "fade", 1000 ).css("color","white");
+            });
+          
+           
+
+
+
+});
+
+
+ 
+  
+ </script>
+    </head>
+<body>
+<br><br> 
+  <nav>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="h" href="contact.html" style="color: white;">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </nav>
+  <br>
+<center><br>
+    <h1 id="start">OUR WORKS!!!</h1>
+    </center>
+    <hr><br><center>
+    <nav>
+<div id="tabs">
+    <br><br><br>
+    <a href="#tabs-1" id="h1">LOGOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#tabs-2" id="h2">POSTERS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#tabs-3" id="h3">PHOTOSHOPS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#tabs-4" id="h4">BROUCHERS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#tabs-5" id="h5">INVITATIONS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#tabs-6" id="h6">CARDS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br><br>
+    <div id="tabs-1">
+      
+        <div class="row">
+          <h1 id="logo">LOGOS</h1><br>
+          <div class="column">
+            <img src="https://marketplace.canva.com/EAE0HS-YOqI/1/0/1600w/canva-beige-make-up-artist-logo-dH1F_snPOXc.jpg" alt="Snow" id="im1"style="width:100%">
+       
+          </div>
+          <div class="column">
+            <img src="https://marketplace.canva.com/EAFMNgqForU/1/0/1600w/canva-gold-luxury-initial-circle-logo-HmajCXfvwBE.jpg" alt="Forest"id="im2" style="width:100%">
+           
+        
+        </div>
+          <div class="column">
+            <img src="https://marketplace.canva.com/EAEmO6OfjMQ/1/0/1600w/canva-creative-shop-logotype-with-feather-and-abstract-background-TkjduWHahn0.jpg" alt="Mountains" style="width:100%">
+            
+          
+        </div>
+        </div><br><br>
+        <center><a href="placeorder.html"><button value="contact now" class="btn" id="view" name="submit">VIEW MORE</button></a></center>
+ 
+
+        </div><br><br><br><br>
+       <hr> <div id="tabs-2">
+          <h1>POSTERS</h1><br>
+        <div class="row">
+          <div class="column">
+            <img src="https://marketplace.canva.com/EAFCPybjIgE/1/0/1131w/canva-blue-and-yellow-modern-professional-online-webinar-poster-Xt-tWxg7eTk.jpg" alt="Snow" id="im1"style="width:100%">
+        
+          </div>
+          <div class="column">
+            <img src="https://marketplace.canva.com/EAFG7MPH4A0/2/0/1131w/canva-navy-modern-business-conference-poster-PP-gwsl_1Hs.jpg" alt="Forest"id="im2" style="width:100%">
+           
+        </div>
+          <div class="column">
+            <img src="https://marketplace.canva.com/EAFJMl8KcjI/1/0/1131w/canva-purple-black-tropical-party-club-poster-orVwDS2lrfY.jpg" alt="Mountains" style="width:100%">          
+        </div>
+        </div><br><br>
+        <center><a href="placeorder.html"><button value="contact now" class="btn" id="view" name="submit">VIEW MORE</button></a></center>
+<hr>
+        </div><br><br><br><br>
+        <div id="tabs-3">
+          <div class="row">
+            <h1>PHOTOSHOPS</h1><br>
+            <div class="column">
+              <img src="https://images.pexels.com/photos/2244330/pexels-photo-2244330.jpeg?cs=srgb&dl=pexels-silver-works-2244330.jpg&fm=jpg" alt="Snow" id="im1"style="width:100%" height="400px"></div>
+            <div class="column">
+              <img src="https://images.pexels.com/photos/2463158/pexels-photo-2463158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Forest"id="im2" style="width:100%" height="400px">
+</div>
+            <div class="column">
+              <img src="https://images.pexels.com/photos/3253031/pexels-photo-3253031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mountains" style="width:100%" height="400px">            
+          </div>
+          </div><br><br>
+          <center><a href="placeorder.html"><button value="contact now" class="btn" name="submit">VIEW MORE</button></a></center>
+
+          </div><br><br><br><br>
+          <div id="tabs-4">
+            <div class="row">
+              <h1>BROUCHERS</h1><br>
+              <div class="column">
+                <img src="https://marketplace.canva.com/EAFGwljmwEc/1/0/1600w/canva-green-white-torn-travel-trifold-brochure-e5GOVl36qsY.jpg" alt="Snow" id="im1"style="width:100%">
+</div>
+              <div class="column">
+                <img src="https://marketplace.canva.com/EAFIy557R7E/1/0/1600w/canva-white-green-professional-winter-time-travel-trifold-brochure-ZRwDoMgZlvw.jpg" alt="Forest"id="im2" style="width:100%">
+</div>
+              <div class="column">
+                <img src="https://marketplace.canva.com/EAEIGgKv-CA/1/0/1600w/canva-brown-and-pink-abstract-beauty-sales-product-trifold-brochure-v6v-wWvL518.jpg" alt="Mountains" style="width:100%">
+              
+            </div>
+            </div><br><br>
+            <center><a href="placeorder.html"><button value="contact now" class="btn" name="submit">VIEW MORE</button></a></center>
+
+            </div><br><br><br><br>
+            <div id="tabs-5">
+              <div class="row">
+                <h1>INVITATIONS</h1><br>
+                <div class="column">
+                  <img src="https://marketplace.canva.com/EAE8ggrgJrc/1/0/1135w/canva-wedding-invitation-navy-flower-watercolor-ZbQgxH2gLQo.jpg" alt="Snow" id="im1"style="width:100%">
+</div>
+                <div class="column">
+                  <img src="https://marketplace.canva.com/EAFLkaJfC-E/1/0/1135w/canva-watercolor-wedding-invitation-portrait-t4cT00OMTrA.jpg" alt="Forest"id="im2" style="width:100%">
+</div>
+                <div class="column">
+                  <img src="https://marketplace.canva.com/EAFBwz2J9LI/1/0/1135w/canva-wedding-invitation-black-gold-alcohol-ink-JdJndg9RCqQ.jpg" alt="Mountains" style="width:100%">                
+              </div>
+              </div><br><br>
+              <center><a href="placeorder.html"><button value="contact now" class="btn" name="submit">VIEW MORE</button></a></center>
+
+              </div><br><br><br><br>
+              <div id="tabs-6">
+                <div class="row">
+                  <h1>CARDS</h1><br>
+                  <div class="column">
+                    <img src="https://marketplace.canva.com/EAFBrwaxjvE/2/0/1600w/canva-black-gold-diamonds-luxury-business-card-5YeKpJ5yQkM.jpg" alt="Snow" id="im1"style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="https://marketplace.canva.com/EAFAAHH1E4o/2/0/1600w/canva-blue-modern-graphic-design-with-details-business-card-template-mWTNz0c_Gm4.jpg" alt="Forest"id="im2" style="width:100%">
+</div>
+                  <div class="column">
+                    <img src="https://marketplace.canva.com/EAFKVovg2vk/3/0/1600w/canva-blue-and-white-elegant-business-card-DVhbkN_XAcc.jpg" alt="Mountains" style="width:100%">
+</div>
+                </div><br><br>
+                <center><a href="placeorder.html"><button value="contact now" class="btn" name="submit">VIEW MORE</button></a></center>
+
+                </div><br><br><br><br>
+        
+         
+
+</div>
+</nav>
+</center><br><center><br><br>
+<h1>RATE OUR GALLERY</h1><hr>
+<fieldset>
+  <legend>GALLERY RATINGS: </legend><br><br>
+ 
+  <input type="checkbox" name="checkbox-1" id="checkbox-1">
+  <label for="checkbox-1">2 Star</label>
+ 
+  <input type="checkbox" name="checkbox-2" id="checkbox-2">
+  <label for="checkbox-2">3 Star</label>
+  
+  <input type="checkbox" name="checkbox-3" id="checkbox-3">
+  <label for="checkbox-3">4 Star</label>
+
+  <input type="checkbox" name="checkbox-4" id="checkbox-4">
+  <label for="checkbox-4">5 Star</label>
+</fieldset><br><br>
+<button value="contact now" id="rate" class="btn" name="submit">RATE</button></center>
+<br><br><br>
+</body>
+</html>
+
+</body>
+</html>

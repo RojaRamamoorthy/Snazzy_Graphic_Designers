@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You</title>
+  <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+   <!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Dorsa" rel="stylesheet">
+<!-- //web font -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script>
+    $( function() {
+      $(".client").click(function(){
+               $(".client").effect( "puff", 1000 ).css("color","white");
+            });
+         
+        $("p").click(function(){
+               $("p").effect( "bounce", {times:4}, 1000 ).css("color","#d3ad7f");
+            });
+           
+      $( "#slider" ).slider();
+      $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+    } );
+
+    $("button").click(function(){
+    $("div").animate({left: '250px'});
+    $("h1").animate({font:'29px'});
+  });
+
+
+    </script>
+   
+    <style>
+        .btn {
+            height: 50px;
+            background-color: #d3ad7f;
+            color: white;
+            width: 100px;
+  box-shadow: 0 8px 16px 0 rgba(235, 235, 235, 0.2), 0 6px 20px 0 rgba(237, 229, 229, 0.19);
+}
+     body{
+       background-color: black;
+       color: #d3ad7f;
+       font-family: 'Times New Roman', Times, serif;
+     }
+     section{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+     }
+
+     .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  background: rgb(0, 0, 0);
+  padding: 15px;
+  margin: 4%;
+}
+.container span {
+ height: 560px;
+ padding: 7px;
+ border: solid #d3ad7f 0.7px;
+ width: 340px;
+ transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  background-color: rgb(46, 45, 45);
+}
+.container img {
+  width: 100%;
+  height: 45%;
+  border: solid #d3ad7f 1.7px;
+  display: block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 100ms ease-out;
+
+}
+.container img:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.ttl{
+    color: #dcd4cb;
+    font-size: medium;
+}
+.content{
+    text-align: left;
+
+}
+a{
+  background-color: #d3ad7f;
+  border: none;
+  color:white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:bold ;
+}
+  
+a:hover{
+    color: black;
+    background-color:white
+}
+
+.abtimg{
+  width: 70%;
+  height: 60%;
+}
+
+.abtimg:hover{
+  width: 84%;
+  height: 70%;
+}
+.cont{
+  margin-left: 120px;
+  margin-right: 100px;
+  text-align: left;
+  margin-top: 70px;
+  font-size: 40px;
+}
+    </style>
+</head>
+<body>
+    
+<center><h1><b>SNAZZY GRAPHIC DESIGNERS</b></h1></center><br><br>
+    <center>
+		<nav>
+   
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="h" href="index.html">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="about.html" id="ab" style="color: black;">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="services.html">SERVICES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="gallery.html">GALLERY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+			<a href="form.html">ORDER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</center>
+		</nav>
+		
+    <br><hr>
+    <!--ABOUT-->
+    <section  style="text-align: center;"><br>
+        <h1 style="text-align: center;">About Us</h1><br>
+         <br>
+         <div>
+            <img class="abtimg" src="https://cdn-hdpij.nitrocdn.com/gWgrzEyPAqScbfdoSlDhLoZZDgzdWFxP/assets/images/optimized/rev-96bfb33/wp-content/uploads/2023/02/60a2e242-72aa-463f-9f8b-5df15a71ccc2.jpg" alt="no image"/>
+              <br>
+              <p class="cont">Collaborating directly with clients, we create branding systems to digital campaigns for companies large and small. Projects are steered by creative director and founder, Kim Lincon. For projects that need a little more than what can fit on her plate, she relies on her scale-able backup squad of talented freelancers.
+              </p>
+          </div>
+        <br>
+        <img style="width: 88%;" class="client" src="https://static.packt-cdn.com/products/9781789343250/graphics/assets/66b9459c-2082-48f5-bae3-577c0d524240.png" alt="no img"/>
+    </section>
+   
+   <center><button class="btn"><a href="services.html">More</a></button></center>
+   <section>
+       <br>
+       <video width="70%" height="40%" controls>
+        <source src="shutter.mp4" type="video/mp4">
+        <source src="shutter.mp4" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+      <br><hr><br>
+   </section>
+</body>
+</html>
